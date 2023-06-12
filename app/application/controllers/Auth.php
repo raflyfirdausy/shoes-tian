@@ -67,7 +67,7 @@ class Auth extends Auth_Controller
             [
                 'field' => 'email',
                 'label' => 'Email',
-                'rules' => 'trim|required|valid_email|is_unique[shoes.user.email]',
+                'rules' => 'trim|required|valid_email|is_unique[user.email]',
             ],
             [
                 'field' => 'password',
