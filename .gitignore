@@ -3,5 +3,6 @@
 **/vendor/*
 **/node_modules/*
 
-application/logs/*
-excel/upload/*
+app/application/logs/*
+app/excel/upload/*
+app/assets/backup_db_simpus/*

@@ -1,0 +1,7 @@
+.docker/data/*
+**/.sessions/*
+**/vendor/*
+**/node_modules/*
+
+application/logs/*
+excel/upload/*
