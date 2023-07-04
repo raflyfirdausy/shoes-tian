@@ -111,7 +111,7 @@
                 </div>
                 <div class="col-md-7 w-full index-z">
                     <div>
-                        <h1 class="white-color mt-420">Pilihan Terbaik untuk Perawatan Barang Kesayangan Anda</h1>
+                        <h1 class="white-color mt-420">Pilihan Terbaik untuk Perawatan Sepatu Anda</h1>
                         <p class=" txt-16">Kami menangani perawatan sepatu. Kami melakukan
                             perawatan secara profesional, dengan teknik khusus, serta menggunakan alat dan bahan premium
                             untuk melakukan perawatan.</p>
@@ -300,7 +300,7 @@
             <h1 class="text-about-us my-3">Tentang Kami</h1>
             <div class="row  justify-content-between">
                 <div class="col-md-6  about-left">
-                    <img class="img-fluid bg-radius" src="<?= asset("shoes/") ?>assets/front/img/icon-founder.jpg" alt="founder shoes and care" width="568px" height="398px">
+                    <img class="img-fluid bg-radius" src="<?= asset("shoes/") ?>assets/front/img/founder.jpeg" alt="founder shoes and care" width="568px" height="398px">
                 </div>
                 <div class="col-md-6 secondary-text-color about-right">
                     <h1 class="secondary-text-color">Shoes and Care</h1>

@@ -23,7 +23,7 @@
                  <div class="footer-menu">
                      <div>
                          <span class="" itemprop="address">
-                             <p class="title-footer">Alamat Kantor:</p> Jl. Letkol Isdiman No.17A, Purbalingga Kidul, Kec. Purbalingga, Kabupaten Purbalingga, Jawa Tengah 53313
+                             <p class="title-footer">Alamat Kantor:</p>  Jln klapasawit no 10, Desa klapasawiit RT 2/3, Kec. Kalimanah, Kab Purbalingga, 53371
                          </span><br><br>
                      </div>
                  </div>
