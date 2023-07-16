@@ -11,18 +11,23 @@ class Pemesanan extends APP_Controller
         ]);
     }
 
-    public function index()
+    private function getData($jenis = NULL)
     {
         $jenis_laporan  = $this->input->get('jenis_laporan');
         $range_awal     = $this->input->get('range_awal');
         $range_akhir    = $this->input->get('range_akhir');
 
         if ($jenis_laporan !== "PER_HARI" || empty($range_awal) || empty($range_akhir)) {
-            redirect(base_url('laporan/pemesanan?jenis_laporan=PER_HARI&range_awal=' . date('Y-m-01') . '&range_akhir=' . date('Y-m-t')));
+            if ($jenis !== NULL) {
+                redirect(base_url('laporan/pemesanan/' . $jenis . '?jenis_laporan=PER_HARI&range_awal=' . date('Y-m-01') . '&range_akhir=' . date('Y-m-t')));
+            } else {
+                redirect(base_url('laporan/pemesanan?jenis_laporan=PER_HARI&range_awal=' . date('Y-m-01') . '&range_akhir=' . date('Y-m-t')));
+            }
         }
 
         $firstDateInCurrentMonth    = new DateTime(date($range_awal));
         $lastDateInCurrentMonth     = new DateTime(date($range_akhir));
+        $lastDateInCurrentMonth->modify('+1 day');
         $dateRange                  = new DatePeriod($firstDateInCurrentMonth, new DateInterval('P1D'), $lastDateInCurrentMonth);
         $defaultValue               = ["total_transaksi" => "0", "total_rp" => "0"];
         $dataGrafik                 = [];
@@ -97,10 +102,45 @@ class Pemesanan extends APP_Controller
         // ]);
 
         $data = [
-            "title"     => "Laporan Pendapatan",
+            "title"     => "Laporan Pemesanan " . $jenis ?: "",
             "data"      => $dataGrafik,
             "total"     => $dataTotal
         ];
-        $this->loadViewBack("laporan/pemesanan/index", $data);
+        return $data;
+    }
+
+    public function index()
+    {
+        $this->loadViewBack("laporan/pemesanan/index", $this->getData());
+    }
+
+    public function booking()
+    {
+        $this->loadViewBack("laporan/pemesanan/booking", $this->getData("booking"));
+    }
+
+    public function proses()
+    {
+        $this->loadViewBack("laporan/pemesanan/proses", $this->getData("proses"));
+    }
+
+    public function selesai()
+    {
+        $this->loadViewBack("laporan/pemesanan/selesai", $this->getData("selesai"));
+    }
+
+    public function tolak()
+    {
+        $this->loadViewBack("laporan/pemesanan/tolak", $this->getData("tolak"));
+    }
+
+    public function batal()
+    {
+        $this->loadViewBack("laporan/pemesanan/batal", $this->getData("batal"));
+    }
+
+    public function expired()
+    {
+        $this->loadViewBack("laporan/pemesanan/expired", $this->getData("expired"));
     }
 }

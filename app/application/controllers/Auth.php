@@ -52,7 +52,10 @@ class Auth extends Auth_Controller
             [
                 'field' => 'nama',
                 'label' => 'Nama',
-                'rules' => 'trim|required'
+                'rules' => 'trim|required|alpha',
+                'errors' => [
+                    'alpha' => 'Nama harus menggunakan huruf',
+                ]
             ],
             [
                 'field' => 'nohp',

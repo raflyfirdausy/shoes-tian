@@ -104,66 +104,104 @@
 
     <?php $this->load->view("home/template/header") ?>
 
-    <section class="main-background">
+    <section class="detail-service-section" style="margin-top:100px;margin-bottom:50px;" id="about-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 hidden">
+                <div>
+                    <h1 class="text-center mb-15">Layanan Kami</h1>
+                    <p class="text-center">Kami memberikan berbagai macam layanan untuk perawatan barang kesayangan anda
+                        yang akan dikerjakan oleh tim kami yang sudah berpengalaman dan professional.</p>
                 </div>
-                <div class="col-md-7 w-full index-z">
-                    <div>
-                        <h1 class="white-color mt-420">Pilihan Terbaik untuk Perawatan Sepatu Anda</h1>
-                        <p class=" txt-16">Kami menangani perawatan sepatu. Kami melakukan
-                            perawatan secara profesional, dengan teknik khusus, serta menggunakan alat dan bahan premium
-                            untuk melakukan perawatan.</p>
-                        <div class="content my-2rem">
+            </div>
+            <div class="row">
+                <?php foreach ($paket as $p) : ?>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <div class="el-card-item pb-3">
+                                <div class="el-card-avatar mb-3 el-overlay-1 w-100 overflow-hidden position-relative text-center ">
+                                    <a class="image-popup-vertical-fit" href="<?= $p["gambar"] ? base_url(LOKASI_PAKET_GAMBAR . $p["gambar"]) : base_url(LOKASI_LOGO) ?>">
+                                        <img src="<?= $p["gambar"] ? base_url(LOKASI_PAKET_GAMBAR . $p["gambar"]) : base_url(LOKASI_LOGO) ?>" alt="<?= $p["nama"] ?>" class="d-block position-relative w-100" />
+                                    </a>
+                                </div>
+                                <div class="el-card-content text-center">
+                                    <h4 class="mb-0"><?= $p["nama"] ?></h4>
+                                    <span class="text-muted"><?= $p["deskripsi"] ?></span>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach ?>
+            </div>
+            <div class="middle-button"><a href="<?= base_url("home/layanan") ?>" class="btn-black">Lihat Selengkapnya <i style="font-size:12px;margin-left:20px;" class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
 
+    </section>
+
+    <div>
+        <section class="main-background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 hidden">
+                    </div>
+                    <div class="col-md-7 w-full index-z">
+                        <div>
+                            <h1 class="white-color mt-420">Pilihan Terbaik untuk Perawatan Sepatu Anda</h1>
+                            <p class=" txt-16">Kami menangani perawatan sepatu. Kami melakukan
+                                perawatan secara profesional, dengan teknik khusus, serta menggunakan alat dan bahan premium
+                                untuk melakukan perawatan.</p>
+                            <div class="content my-2rem">
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 hidden">
-                </div>
-                <div class="col-md-7 index-z w-full">
-                    <div class="">
-                        <h1 class="second-title-hero-img">Kami Telah Melayani pelanggan dengan service yang terbaik</h1>
-                        <div class="our-service-section">
-                            <div>
-                                <h2 class="why-us-title">5 Layanan</h2>
-                                <p>Dengan pelayanan terbaik </p>
-                            </div>
-                            <div>
-                                <h2 class="why-us-title">500+</h2>
-                                <p>pasang sepatu telah ditangani </p>
-                            </div>
-                            <div>
-                                <h2 class="why-us-title">100+</h2>
-                                <p>pelanggan puas dengan layanan Kami </p>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 hidden">
+                    </div>
+                    <div class="col-md-7 index-z w-full">
+                        <div class="">
+                            <h1 class="second-title-hero-img">Kami Telah Melayani pelanggan dengan service yang terbaik</h1>
+                            <div class="our-service-section">
+                                <div>
+                                    <h2 class="why-us-title">5 Layanan</h2>
+                                    <p>Dengan pelayanan terbaik </p>
+                                </div>
+                                <div>
+                                    <h2 class="why-us-title">500+</h2>
+                                    <p>pasang sepatu telah ditangani </p>
+                                </div>
+                                <div>
+                                    <h2 class="why-us-title">100+</h2>
+                                    <p>pelanggan puas dengan layanan Kami </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="absoulute-position">
-        <div class="container">
-            <div class="row">
-                <img src="<?= asset("shoes/") ?>assets/front/img/hero-img.html" class="hero-image-new" alt="shoes and care - header image" />
+        <section class="absoulute-position" style="top: 900px;">
+            <div class="container">
+                <div class="row">
+                    <img src="<?= asset("shoes/") ?>assets/front/img/hero-img.html" class="hero-image-new" alt="shoes and care - header image" />
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="promo-section">
-    </section>
+        <section class="promo-section">
+        </section>
+    </div>
 
-    <section class="service-section" id="service-section">
+
+    <section class="service-section" id="service-section" style="">
         <div class="container">
             <div class="flex">
                 <div clsass="col-md-8">
@@ -260,40 +298,7 @@
         </div>
     </section>
 
-    <section class="detail-service-section" id="about-section">
-        <div class="container">
-            <div class="row">
-                <div>
-                    <h1 class="text-center mb-15">Layanan Kami</h1>
-                    <p class="text-center">Kami memberikan berbagai macam layanan untuk perawatan barang kesayangan anda
-                        yang akan dikerjakan oleh tim kami yang sudah berpengalaman dan professional.</p>
-                </div>
-            </div>
-            <div class="row">
-                <?php foreach ($paket as $p) : ?>
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="el-card-item pb-3">
-                                <div class="el-card-avatar mb-3 el-overlay-1 w-100 overflow-hidden position-relative text-center ">
-                                    <a class="image-popup-vertical-fit" href="<?= $p["gambar"] ? base_url(LOKASI_PAKET_GAMBAR . $p["gambar"]) : base_url(LOKASI_LOGO) ?>">
-                                        <img src="<?= $p["gambar"] ? base_url(LOKASI_PAKET_GAMBAR . $p["gambar"]) : base_url(LOKASI_LOGO) ?>" alt="<?= $p["nama"] ?>" class="d-block position-relative w-100" />
-                                    </a>
-                                </div>
-                                <div class="el-card-content text-center">
-                                    <h4 class="mb-0"><?= $p["nama"] ?></h4>
-                                    <span class="text-muted"><?= $p["deskripsi"] ?></span>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach ?>
-            </div>
-            <div class="middle-button"><a href="<?= base_url("home/layanan") ?>" class="btn-black">Lihat Selengkapnya <i style="font-size:12px;margin-left:20px;" class="fa fa-chevron-right" aria-hidden="true"></i></a>
-            </div>
-        </div>
-
-    </section>
+    
 
     <section class="about-us-section" id="about-section">
         <div class="container">

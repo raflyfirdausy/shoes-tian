@@ -7,7 +7,7 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table id="table_data" class="table table-sm table-bordered table-striped" style="width:100%">
+            <table id="table_data" class="table table-bordered table-striped" style="width:100%">
                 <thead>
                     <tr>    
                         <th class="text-center" style="width: 3%">No.</th>

@@ -1,5 +1,5 @@
 <header class="header-area" id="header-area">
-    <div class="dope-nav-container breakpoint-off">
+    <div class="dope-nav-container breakpoint-off" style="background-color: #000;">
         <div class="container">
             <div class="row">
                 <!-- dope Menu -->
@@ -38,6 +38,9 @@
                                 </li>
                                 <li>
                                     <a href="<?= base_url("home/layanan") ?>">Daftar Harga</a>
+                                </li>
+                                <li>
+                                    <a class="" href="<?= base_url("auth/register") ?>">Daftar</a>
                                 </li>
                                 <li>
                                     <a class="pricelist" href="<?= base_url("auth") ?>">Masuk</a>

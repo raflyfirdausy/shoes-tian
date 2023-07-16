@@ -104,6 +104,48 @@
 <li class="sidebar-item">
     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('laporan/pemesanan') ?>" aria-expanded="false">
         <i class="mdi mdi-code-equal"></i>
-        <span class="hide-menu">Data Pemesanan</span>
+        <span class="hide-menu">Data Pemesanan Semua</span>
+    </a>
+</li>
+
+<li class="sidebar-item">
+    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('laporan/pemesanan/booking') ?>" aria-expanded="false">
+        <i class="mdi mdi-code-equal"></i>
+        <span class="hide-menu">Data Pemesanan Booking</span>
+    </a>
+</li>
+
+<li class="sidebar-item">
+    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('laporan/pemesanan/proses') ?>" aria-expanded="false">
+        <i class="mdi mdi-code-equal"></i>
+        <span class="hide-menu">Data Pemesanan Diproses</span>
+    </a>
+</li>
+
+<li class="sidebar-item">
+    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('laporan/pemesanan/selesai') ?>" aria-expanded="false">
+        <i class="mdi mdi-code-equal"></i>
+        <span class="hide-menu">Data Pemesanan Selesai</span>
+    </a>
+</li>
+
+<li class="sidebar-item">
+    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('laporan/pemesanan/tolak') ?>" aria-expanded="false">
+        <i class="mdi mdi-code-equal"></i>
+        <span class="hide-menu">Data Pemesanan Ditolak</span>
+    </a>
+</li>
+
+<li class="sidebar-item">
+    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('laporan/pemesanan/batal') ?>" aria-expanded="false">
+        <i class="mdi mdi-code-equal"></i>
+        <span class="hide-menu">Data Pemesanan Dibatalkan</span>
+    </a>
+</li>
+
+<li class="sidebar-item">
+    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('laporan/pemesanan/expired') ?>" aria-expanded="false">
+        <i class="mdi mdi-code-equal"></i>
+        <span class="hide-menu">Data Pemesanan Expired</span>
     </a>
 </li>

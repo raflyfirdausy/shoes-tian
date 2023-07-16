@@ -58,15 +58,11 @@ $range_akhir    = $this->input->get('range_akhir');
                     <tr>
                         <th rowspan="2">No</th>
                         <th rowspan="2">Tanggal</th>
-                        <th colspan="2">Booking</th>
                         <th colspan="2">Diproses</th>
-                        <th colspan="2">Selesai</th>
-                        <th colspan="2">Ditolak</th>
-                        <th colspan="2">Dibatalkan</th>
-                        <th colspan="2">Expired</th>
+                      
                     </tr>
                     <tr>
-                        <?php for ($i = 0; $i < 6; $i++) : ?>
+                        <?php for ($i = 0; $i < 1; $i++) : ?>
                             <th>Total</th>
                             <th>Nominal</th>
                         <?php endfor ?>
@@ -78,45 +74,22 @@ $range_akhir    = $this->input->get('range_akhir');
                         <tr>
                             <td><?= $no++ ?></td>
                             <td><?= $d["tanggal"] ?></td>
-                            <td><?= $d["booking"]["total_transaksi"] ?></td>
-                            <td><?= $d["booking"]["total_rp"] ?></td>
+                           
 
                             <td><?= $d["diproses"]["total_transaksi"] ?></td>
                             <td><?= $d["diproses"]["total_rp"] ?></td>
 
-                            <td><?= $d["selesai"]["total_transaksi"] ?></td>
-                            <td><?= $d["selesai"]["total_rp"] ?></td>
-
-                            <td><?= $d["ditolak"]["total_transaksi"] ?></td>
-                            <td><?= $d["ditolak"]["total_rp"] ?></td>
-
-                            <td><?= $d["dibatalkan"]["total_transaksi"] ?></td>
-                            <td><?= $d["dibatalkan"]["total_rp"] ?></td>
-
-                            <td><?= $d["expired"]["total_transaksi"] ?></td>
-                            <td><?= $d["expired"]["total_rp"] ?></td>
+                         
                         </tr>
                     <?php endforeach ?>
                 </tbody>
                 <tfoot style="background-color: black; color:white">
                     <th colspan="2">TOTAL</th>
-                    <th><?= $total["booking"]["total_transaksi"] ?></th>
-                    <th><?= $total["booking"]["total_rp"] ?></th>
-
+                   
                     <th><?= $total["diproses"]["total_transaksi"] ?></th>
                     <th><?= $total["diproses"]["total_rp"] ?></th>
 
-                    <th><?= $total["selesai"]["total_transaksi"] ?></th>
-                    <th><?= $total["selesai"]["total_rp"] ?></th>
-
-                    <th><?= $total["ditolak"]["total_transaksi"] ?></th>
-                    <th><?= $total["ditolak"]["total_rp"] ?></th>
-
-                    <th><?= $total["dibatalkan"]["total_transaksi"] ?></th>
-                    <th><?= $total["dibatalkan"]["total_rp"] ?></th>
-
-                    <th><?= $total["expired"]["total_transaksi"] ?></th>
-                    <th><?= $total["expired"]["total_rp"] ?></th>
+                  
                 </tfoot>
             </table>
         </div>

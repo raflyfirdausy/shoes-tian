@@ -44,7 +44,7 @@
                             <form method="POST" action="<?= $URL_REGISTER ?>" class="form-horizontal">
                                 <div class="form-group row ">
                                     <div class="col-12 ">
-                                        <input value="<?= set_value("nama") ?>" name="nama" class="form-control form-control-lg" type="text" required placeholder="Nama Lengkap">
+                                        <input value="<?= set_value("nama") ?>" name="nama" class="form-control form-control-lg" type="text" onkeydown="return /[a-zA-Z ]/i.test(event.key)" required placeholder="Nama Lengkap">
                                     </div>
                                 </div>
                                 <div class="form-group row ">
